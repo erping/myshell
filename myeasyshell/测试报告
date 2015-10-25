@@ -1,0 +1,70 @@
+本程序较好的完成了要求的功能，以下是测试结果
+yaping@yaping-ThinkPad-Edge-E431:~/test$./myshell
+普通命令
+->ls
+exec execvptest myshell shell shell1.c shell2.c strtok strtok1.c
+exec.c execvptest.c myshell.c shell1  shell2 shell.c strtok1 strtok.c
+带参数命令
+->ls -l
+-rwxrwxr-x 1 yaping yaping  8377  6月 29 18:11 exec
+-rw-rw-r-- 1 yaping yaping   127  6月 29 18:10 exec.c
+-rwxrwxr-x 1 yaping yaping  8589  6月 30 12:01 execvptest
+-rw-rw-r-- 1 yaping yaping   312  6月 30 12:43 execvptest.c
+-rwxrwxr-x 1 yaping yaping 13277  7月  2 10:24 myshell
+-rw-rw-r-- 1 yaping yaping  3533  7月  2 11:39 myshell.c
+-rwxrwxr-x 1 yaping yaping  8840  6月 30 10:26 shell
+-rwxrwxr-x 1 yaping yaping 13039  7月  1 16:19 shell1
+-rw-rw-r-- 1 yaping yaping  2317  7月  1 23:39 shell1.c
+-rwxrwxr-x 1 yaping yaping  8841  7月  1 16:12 shell2
+-rw-rw-r-- 1 yaping yaping  1884  7月  1 23:39 shell2.c
+-rw-rw-r-- 1 yaping yaping  1451  7月  1 23:39 shell.c
+-rwxrwxr-x 1 yaping yaping  8490  6月 30 11:53 strtok
+-rwxrwxr-x 1 yaping yaping  8546  6月 29 18:42 strtok1
+-rw-rw-r-- 1 yaping yaping   234  6月 29 18:42 strtok1.c
+-rw-rw-r-- 1 yaping yaping   225  6月 30 12:44 strtok.c
+输出重定向
+->ls -l > ls.txt
+->ls -l
+-rwxrwxr-x 1 yaping yaping  8377  6月 29 18:11 exec
+-rw-rw-r-- 1 yaping yaping   127  6月 29 18:10 exec.c
+-rwxrwxr-x 1 yaping yaping  8589  6月 30 12:01 execvptest
+-rw-rw-r-- 1 yaping yaping   312  6月 30 12:43 execvptest.c
+-rw-rw-r-- 1 yaping yaping  1093  7月  2 11:59 ls.txt
+-rwxrwxr-x 1 yaping yaping 13277  7月  2 10:24 myshell
+-rw-rw-r-- 1 yaping yaping  3533  7月  2 11:39 myshell.c
+-rwxrwxr-x 1 yaping yaping  8840  6月 30 10:26 shell
+-rwxrwxr-x 1 yaping yaping 13039  7月  1 16:19 shell1
+-rw-rw-r-- 1 yaping yaping  2317  7月  1 23:39 shell1.c
+-rwxrwxr-x 1 yaping yaping  8841  7月  1 16:12 shell2
+-rw-rw-r-- 1 yaping yaping  1884  7月  1 23:39 shell2.c
+-rw-rw-r-- 1 yaping yaping  1451  7月  1 23:39 shell.c
+-rwxrwxr-x 1 yaping yaping  8490  6月 30 11:53 strtok
+-rwxrwxr-x 1 yaping yaping  8546  6月 29 18:42 strtok1
+-rw-rw-r-- 1 yaping yaping   234  6月 29 18:42 strtok1.c
+-rw-rw-r-- 1 yaping yaping   225  6月 30 12:44 strtok.c
+可以看到上面多了一个ls.txt
+后台
+->ls -l &
+-rwxrwxr-x 1 yaping yaping  8377  6月 29 18:11 exec
+-rw-rw-r-- 1 yaping yaping   127  6月 29 18:10 exec.c
+-rwxrwxr-x 1 yaping yaping  8589  6月 30 12:01 execvptest
+-rw-rw-r-- 1 yaping yaping   312  6月 30 12:43 execvptest.c
+-rw-rw-r-- 1 yaping yaping  1093  7月  2 11:59 ls.txt
+-rwxrwxr-x 1 yaping yaping 13277  7月  2 10:24 myshell
+-rw-rw-r-- 1 yaping yaping  3533  7月  2 11:39 myshell.c
+-rwxrwxr-x 1 yaping yaping  8840  6月 30 10:26 shell
+-rwxrwxr-x 1 yaping yaping 13039  7月  1 16:19 shell1
+-rw-rw-r-- 1 yaping yaping  2317  7月  1 23:39 shell1.c
+-rwxrwxr-x 1 yaping yaping  8841  7月  1 16:12 shell2
+-rw-rw-r-- 1 yaping yaping  1884  7月  1 23:39 shell2.c
+-rw-rw-r-- 1 yaping yaping  1451  7月  1 23:39 shell.c
+-rwxrwxr-x 1 yaping yaping  8490  6月 30 11:53 strtok
+-rwxrwxr-x 1 yaping yaping  8546  6月 29 18:42 strtok1
+-rw-rw-r-- 1 yaping yaping   234  6月 29 18:42 strtok1.c
+-rw-rw-r-- 1 yaping yaping   225  6月 30 12:44 strtok.c
+->
+->exit
+yaping@yaping-ThinkPad-Edge-E431:~/test$ 
+改变提示符
+->PS1 = ##
+##
